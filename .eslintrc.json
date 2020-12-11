@@ -1,0 +1,43 @@
+{
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 11
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["node_modules/*", ".next/*", "out/*"],
+  "rules": {
+    "prettier/prettier": "error",
+    // We will use TypeScript's types for component props instead
+    "react/prop-types": "off",
+    // No need to import React when using NextJS
+    "react/react-in-jsx-scope": "off",
+    // This rule is not compatible with Next.JS's <Link /> components
+    "jsx-a11y/anchor-is-valid": "off",
+    // Why would you want unused vars?
+    "@typescript-eslint/no-unused-vars": "error",
+    // I suggest this setting for requiring return types on functions only where useful
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
+}

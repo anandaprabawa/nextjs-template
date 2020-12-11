@@ -1,0 +1,20 @@
+{
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll"],
+  "[javascript]": { "editor.formatOnSave": false },
+  "[javascriptreact]": { "editor.formatOnSave": false },
+  "[typescript]": { "editor.formatOnSave": false },
+  "[typescriptreact]": { "editor.formatOnSave": false },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "css.lint.unknownAtRules": "ignore",
+  "cSpell.words": ["nextjs", "tailwindcss", "typeahead"]
+}
